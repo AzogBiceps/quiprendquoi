@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
 const bodyParser = require('body-parser');
+const axios = require('axios');
+require('dotenv').config()
 
 app.set('view engine', 'pug');
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
@@ -12,8 +12,10 @@ app.get('/', function(req, res) {
 });
 
 app.post('/party', function(req, res) {
-  console.log(req.body);
-  res.send('Post ok !');
+  axios
+  .post(`${process.env.API_URL}/party`, req.body)
+  .then(({data}) => console.log(data))
+  .catch((err) => console.error(err));
 });
 
 app.listen(process.env.PORT, () => console.log(`Front app listening on port ${process.env.PORT}!`));

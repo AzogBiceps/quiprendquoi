@@ -3,8 +3,11 @@ const app = express()
 
 require('dotenv').config();
 
+app.set('view engine', 'pug');
+
+
 app.get('/', function(req, res) {
-  res.send('Hola papii');
+  res.render('index');
 });
 
 app.listen(process.env.PORT, () => console.log(`Front app listening on port ${process.env.PORT}!`));

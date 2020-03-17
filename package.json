@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "sass": "node-sass styles/style.scss public/style.css -w --output-style compressed"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +15,11 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "method-override": "^3.0.0",
     "pug": "^2.0.4"
   },
   "devDependencies": {
+    "node-sass": "^4.13.1",
     "nodemon": "^2.0.2"
   }
 }

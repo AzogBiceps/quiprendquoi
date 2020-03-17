@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const axios = require('axios');
-require('dotenv').config()
+require('dotenv').config();
 
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: true }));

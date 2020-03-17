@@ -4,11 +4,11 @@ h2 Créer un événement
 form(method="post" action="/party")
   div
     label(for="name") Nom de l'événement
-    input(name="name" id="name" required minlength="3" placeholder="Fête")
-
+    input(name="name" id="name" required placeholder="Fête")
+  div
     label(for="author" required) Votre pseudo
-    input(name="author" id="author" required minlength="3" placeholder="Michael Scott")
-
+    input(name="author" id="author" required placeholder="Michael Scott")
+  div
     label(for="date") Date de l'événement
     input(name="date" id="date" type="date")
   button(type="submit") Créer

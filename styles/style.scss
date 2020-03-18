@@ -1,4 +1,6 @@
 @import 'vendors/reset.scss';
+@import 'config/medias.scss';
+@import 'blocs/newParty.scss';
 
 body {
   padding: 1em;
@@ -12,22 +14,5 @@ h1 {
 
 h2 {
   font-size: 1.2em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
-
-form {
-  font-size: 1.2em;
-  text-align: center;
-
-  div {
-   margin-bottom: 1em;
-  }
-  input {
-    margin-left: 1em;
-    height: 32px;
-    width: 200px;
-    border-radius: 4px;
-    border: 1px solid
-  }
-}
-

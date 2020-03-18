@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run sass\" \"nodemon app.js\"",
-    "sass": "node-sass styles/style.scss public/style.css -w --output-style compressed"
+    "start": "concurrently --kill-others \"npm run sass\" \"npm run watchify\" \"nodemon app.js\"",
+    "sass": "node-sass styles/style.scss public/style.css -w --output-style compressed",
+    "watchify": "watchify scripts/test.js -o public/script.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "watchify": "^3.11.1"
   }
 }

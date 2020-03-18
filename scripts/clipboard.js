@@ -22,4 +22,3 @@ function copyToClipboard($clipboardEl, $button) {
     })
     .catch((err) => console.warn(err));
 }
-

@@ -8,23 +8,19 @@
 
 .newParty__fields {
   margin-bottom: 1em;
-  width: 16em;
+  width: 24em;
 
   @include medium {
-    // grid-template-columns: 175px 1fr;
-    // grid-gap: 5px;
-    // max-width: 500px;
-    width: 24em;
+    width: 16em;
+  }
+
+  @include small {
+    width: 100%;
   }
 
   label {
     display: block;
     margin-bottom: 0.5em;
-    width: 50%;
-
-    // @include medium {
-    //   place-self: center end;
-    // }
   }
   input {
     margin-bottom: 1em;
@@ -44,16 +40,9 @@
 button {
   letter-spacing: 0.05em;
   color: white;
-  padding: .5em 3em .5em 3em;
   border-radius: 20px;
   border: 0px solid;
   background-color: #23436b;
-}
-
-.share {
-
-  label, input {
-    display: block;
-    margin-bottom: 1em;
-  }
+  width: 100%;
+  height: 2em;
 }

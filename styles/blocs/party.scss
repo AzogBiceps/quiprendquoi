@@ -1,9 +1,19 @@
-.share {
-  width: 80%;
+.share, .deleteItem, .addItem {
 
   label, input {
     display: block;
     margin-bottom: 1em;
     width: 100%
+  }
+
+  p {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    text-transform : capitalize;
+  }
+
+  form {
+    margin-bottom: 1em;
   }
 }

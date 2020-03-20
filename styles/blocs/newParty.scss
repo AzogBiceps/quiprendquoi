@@ -1,22 +1,5 @@
-.newParty, .share {
-  white-space: nowrap;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-}
-
 .newParty__fields {
   margin-bottom: 1em;
-  width: 24em;
-
-  @include medium {
-    width: 16em;
-  }
-
-  @include small {
-    width: 100%;
-  }
 
   label {
     display: block;
@@ -34,10 +17,15 @@
     -webkit-box-shadow: 0px 2px 18px -6px rgba(0,0,0,0.50);
     -moz-box-shadow: 0px 2px 18px -6px rgba(0,0,0,0.50);
     box-shadow: 0px 2px 18px -6px rgba(0,0,0,0.50);
+
+    &:last-child {
+      height: 2.4em;
+    }
   }
 }
 
 button {
+  font-size: 1em;
   letter-spacing: 0.05em;
   color: white;
   border-radius: 20px;

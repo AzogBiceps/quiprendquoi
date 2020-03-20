@@ -4,6 +4,10 @@ addEventListener('install', (event) => {
 
 addEventListener('fetch', (event) => {
   if (event.request.headers.get('Accept').includes('text/html')) {
-    event.respondWith(fetch(event.request));
+    event.respondWith(
+      fetch(event.request)
+        .catch(() => new Response('Vous êtes hors ligne')
+      )
+    );
   }
 });

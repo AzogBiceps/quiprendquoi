@@ -2,6 +2,30 @@ include ../partials/header.pug
 h1 Qui prend quoi ?
 h2 Événement #{party.name}
 h3 Créé par #{party.author}
+
 div.share
   label(for="url") Partagez l'événement
   input(id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-share-text=`${party.author} vous invite à rejoindre l'événément ${party.name}`)
+
+p.titleItem Liste d'objets :
+
+  div.deleteItem
+    if items = false
+      each item in party.items
+        form(method="post" action=`/party/${party._id}/items/${item._id}`)
+          p= `${item.name} - ${item.user}`
+          button(type="submit") Supprimer
+    else 
+      p Il n'y a pas encore d'objet. Ajoutez-en un !
+ 
+
+div.addItem
+  form(method="post" action=`/party/${party._id}/items`)
+    div
+      label(for="user") Apporteur de l'objet
+      input(name="user" id="user" required placeholder="Nom")
+      label(for="name") Objet
+      input(name="name" id="name" required placeholder="Objet")
+    button(type="submit") Ajouter 
+
+p.demo

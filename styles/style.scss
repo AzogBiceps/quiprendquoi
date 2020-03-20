@@ -5,7 +5,7 @@
 
 body {
   padding: 1em;
-  font-family: 'Geneva';
+  font-family: Helvetica, sans-serif;
 }
 
 h1 {
@@ -28,6 +28,7 @@ input {
   border-radius: 4px;
   border: 0px solid;
   height: 2em;
+  font-size: 1em;
   width: 16em;
   background-color: white;
   padding-left: .5em;
@@ -35,4 +36,34 @@ input {
   -webkit-box-shadow: 0px 2px 18px -6px rgba(0,0,0,0.50);
   -moz-box-shadow: 0px 2px 18px -6px rgba(0,0,0,0.50);
   box-shadow: 0px 2px 18px -6px rgba(0,0,0,0.50);
+
+  &:hover {
+    -webkit-box-shadow: 0px 2px 18px -6px rgba(0,0,0,0.80);
+    -moz-box-shadow: 0px 2px 18px -6px rgba(0,0,0,0.80);
+    box-shadow: 0px 2px 18px -6px rgba(0,0,0,0.80);
+    transition: .5s ease-out;
+    }
+}
+
+
+
+button:hover {
+  cursor: pointer;
+}
+
+.newParty, .share, .deleteItem, .addItem, .titleItem {
+  // white-space: nowrap;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  width: 80%;
+  margin-bottom: 2em;
+
+  @include large {
+    width: 60%;
+  }
+  @include xlarge {
+    width: 30%;
+  }
 }

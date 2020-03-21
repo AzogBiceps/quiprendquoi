@@ -9,14 +9,14 @@ div.share
 
 p.titleItem Liste d'objets :
 
-  div.deleteItem
-    if items = false
-      each item in party.items
-        form(method="post" action=`/party/${party._id}/items/${item._id}`)
-          p= `${item.name} - ${item.user}`
-          button(type="submit") Supprimer
-    else 
-      p Il n'y a pas encore d'objet. Ajoutez-en un !
+div.deleteItem
+  if items
+    each item in party.items
+      form(method="post" action=`/party/${party._id}/items/${item._id}`)
+        p= `${item.name} - ${item.user}`
+        button(type="submit") Supprimer
+  else 
+    p Il n'y a pas encore d'objet. Ajoutez-en un !
  
 
 div.addItem

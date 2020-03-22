@@ -26,10 +26,10 @@ Voici un exemple d'un bout de code en Pug suivi de ce même code en HTML basique
 doctype html  
 html  
     head  
-        title My Page  
+      title My Page  
     body  
-        h1 Heading  
-        p My paragraph here. 
+      h1 Heading  
+      p My paragraph here. 
 ```
 
 ```

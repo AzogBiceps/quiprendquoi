@@ -9,8 +9,8 @@
 ## Améliorations apportées
 
 - New style (commit `28` & `33`)
-- Add item (`17 (done) & 36`)
-- Delete item (`17 (done) & 36`)
+- Add item (commit `17 (done) & 36`)
+- Delete item (commi `17 (done) & 36`)
 
 ## Article personnel
 

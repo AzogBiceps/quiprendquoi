@@ -1,16 +1,18 @@
-.share, .deleteItem, .addItem {
-
-  label, input {
+.share,
+.deleteItem,
+.addItem {
+  label,
+  input {
     display: block;
     margin-bottom: 1em;
-    width: 100%
+    width: 100%;
   }
 
   p {
     display: block;
     margin-bottom: 1em;
     width: 100%;
-    text-transform : capitalize;
+    text-transform: capitalize;
   }
 
   form {

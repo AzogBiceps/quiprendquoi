@@ -41,7 +41,7 @@ addEventListener('fetch', (event) => {
           })
           .catch(() => caches.match(event.request)),
       );
-  };
+  }
 });
       
 function isPartyPage(url) {

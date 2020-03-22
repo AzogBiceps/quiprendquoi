@@ -1,4 +1,7 @@
 include ../partials/header.pug
+script.
+  party = !{JSON.stringify(party)}
+
 h1 Qui prend quoi ?
 h2 Événement #{party.name}
 h3 Créé par #{party.author}
@@ -10,15 +13,13 @@ div.share
 p.titleItem Liste d'objets :
 
 div.deleteItem
-  if items
     each item in party.items
       form(method="post" action=`/party/${party._id}/items/${item._id}`)
         p= `${item.name} - ${item.user}`
         button(type="submit") Supprimer
-  else 
-    p Il n'y a pas encore d'objet. Ajoutez-en un !
+    if party.items.length === 0 
+      p.add Il n'y a pas encore d'objet. Ajoutez-en un !
  
-
 div.addItem
   form(method="post" action=`/party/${party._id}/items`)
     div
@@ -26,6 +27,4 @@ div.addItem
       input(name="user" id="user" required placeholder="Nom")
       label(for="name") Objet
       input(name="name" id="name" required placeholder="Objet")
-    button(type="submit") Ajouter 
-
-p.demo
+    button(type="submit") Ajouter

@@ -82,6 +82,28 @@
     <ellipse cx="112.51694" cy="651.82212" rx="12.40027" ry="39.5"
       transform="translate(-574.07936 452.71367) rotate(-68.15829)" fill="#2f2e41" />
   </svg>
+
+<script>
+  caches.open('parties').then((cache) =>
+    cache.keys().then((keys) =>
+      keys.forEach((key) => {
+        const name = localStorage.getItem(key.url);
+        if (name) {
+          const $link = document.createElement('a');
+          $link.href = key.url;
+          $link.innerHTML = name;
+          document.body.appendChild($link);
+        }
+      }),
+    ),
+  );
+</script>
+
+
+
+
+
+
 </body>
 
 </html>

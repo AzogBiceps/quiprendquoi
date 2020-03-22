@@ -47,24 +47,20 @@ app.post('/party/:id/items/:idItem', function(req, res) {
   .catch((err) => res.send(err));
 });
 
-
-
-app.get('/:id', (req, res) => {
-  axios
-    .get(`${process.env.API_URL}/party/${req.params.id}`)
-    .then(({ data }) => {
-      let items = null;
-      data.items.length === 0 ? items = false : items = true;
-      res.render('party', { 
-        party: data,
-        title: data.name,
-        items,
-        url: `${process.env.FRONT_URL}:${process.env.PORT}/party/${data._id}` 
-    })})
-    .catch((err) => console.log(err))
-  ;
-});
-
-
+// app.get('/:id', (req, res) => {
+//   axios
+//     .get(`${process.env.API_URL}/party/${req.params.id}`)
+//     .then(({ data }) => {
+//       let items = null;
+//       data.items.length === 0 ? items = false : items = true;
+//       res.render('party', { 
+//         party: data,
+//         title: data.name,
+//         items,
+//         url: `${process.env.FRONT_URL}:${process.env.PORT}/party/${data._id}` 
+//     })})
+//     .catch((err) => console.log(err))
+//   ;
+// });
 
 app.listen(process.env.PORT, () => console.log(`Front app listening on port ${process.env.PORT}!`));

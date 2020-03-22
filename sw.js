@@ -31,7 +31,17 @@ addEventListener('fetch', (event) => {
           }
         }),
     );
-  }
+  } else {
+      event.respondWith(
+        fetch(event.request)
+          .then((res) => {
+            const copy = res.clone();
+            caches.open('static').then((cache) => cache.put(event.request, copy));
+            return res;
+          })
+          .catch(() => caches.match(event.request)),
+      );
+  };
 });
       
 function isPartyPage(url) {
